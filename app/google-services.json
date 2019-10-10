@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "72916424034",
+    "firebase_url": "https://proiectscoala-d9dd3.firebaseio.com",
+    "project_id": "proiectscoala-d9dd3",
+    "storage_bucket": "proiectscoala-d9dd3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:72916424034:android:e69fd8143658b381cf483b",
+        "android_client_info": {
+          "package_name": "com.roh44x.eVent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "72916424034-a0qa3b1m9jrr8quhe2vl9o0neej5l406.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.roh44x.eVent",
+            "certificate_hash": "adcf23817977b79e94dbebd69e819974b1df69dd"
+          }
+        },
+        {
+          "client_id": "72916424034-eer6qsjlm7r6oe4rgjiu6901dcnomu8e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAC-pKJywmJNBfuFlZf38UEG2OVl6tkodA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "72916424034-eer6qsjlm7r6oe4rgjiu6901dcnomu8e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
