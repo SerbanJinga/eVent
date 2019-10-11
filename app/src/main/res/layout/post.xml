@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView
+    android:layout_marginRight="16dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginLeft="16dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cat_card_list_item_card"
+    android:layout_width="344dp"
+    android:layout_height="382dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:minHeight="118dp">
+<LinearLayout
+android:orientation="vertical"
+    android:elevation="1dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/titlePost"
+            android:layout_marginLeft="16dp"
+            android:textSize="20dp"
+            android:text="Title goes here"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+
+    <TextView
+        android:id="@+id/usernamePost"
+        android:layout_marginLeft="72dp"
+        android:textSize="14dp"
+        android:text="Secondary text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/postImage"
+        android:layout_width="344dp"
+        android:layout_height="194dp"/>
+
+    <TextView
+        android:id="@+id/descriptionPost"
+        android:layout_marginTop="28dp"
+        android:textSize="14dp"
+        android:text="Lorem ipsum dolor sit amet text text"
+        android:layout_marginLeft="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btnGoing"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="16dp"
+            android:text="Going"
+            android:textSize="14dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnInterested"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="8dp"
+            android:text="Interested"
+            android:textSize="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/noGoing"
+            android:textSize="14dp"
+            android:text="noGoing"
+            android:layout_marginLeft="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/noIntersted"
+            android:layout_marginLeft="8dp"
+            android:text="No interseted"
+            android:textSize="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>
+
+</androidx.cardview.widget.CardView>
+

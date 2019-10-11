@@ -12,6 +12,7 @@ MERGED from [me.zhanghai.android.materialratingbar:library:1.3.2] C:\Users\serba
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\5e3d5ef95f8db1356b43f42a975f3e4a\material-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [me.zhanghai.android.materialprogressbar:library:1.6.1] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\0b1c880378a1f10b056a75f8fa1f7d74\library-1.6.1\AndroidManifest.xml:6:1-15:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\b128781b27d19bd677962f541282bd49\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.firebaseui:firebase-ui-database:6.0.2] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\03ede1837219c04193f1dde8327ad844\firebase-ui-database-6.0.2\AndroidManifest.xml:2:1-13:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\c911ba413ea34d47b5b0c5d37ee8baf6\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\86441a77bdd6184b1f28a13229480806\appcompat-resources-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\5e01aaef64c672842dc0a72e38655b23\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
@@ -22,6 +23,7 @@ MERGED from [com.google.firebase:firebase-firestore:21.1.1] C:\Users\serban\.gra
 MERGED from [com.google.android.gms:play-services-auth:17.0.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\2ab19a01158e055fe3af3828af37848a\play-services-auth-17.0.0\AndroidManifest.xml:17:1-39:12
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.1.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\20be092daf42745473433bfb1fba48b3\lifecycle-extensions-2.1.0\AndroidManifest.xml:17:1-25:12
 MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\8787ee14b71f4455f9a500c717208c9b\recyclerview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [de.hdodenhof:circleimageview:3.0.1] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\0b2e5d2810a9e2205584678f02e280f8\circleimageview-3.0.1\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.firebase:firebase-auth:19.0.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\c9bdc7138a3d0b8dc6b80dbe7571f130\firebase-auth-19.0.0\AndroidManifest.xml:17:1-42:12
 MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\3011de87fc6688213df3d3b67700d344\firebase-auth-interop-18.0.0\AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.firebase:firebase-analytics:17.2.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\ee2e5bc6102667d0234a72dd646fd96d\firebase-analytics-17.2.0\AndroidManifest.xml:2:1-9:12
@@ -64,6 +66,7 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\se
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\68c122ebc838b6c9b0c132e175fbd3de\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\26b73dff2b4661b12c08248c9840c59e\lifecycle-process-2.1.0\AndroidManifest.xml:17:1-30:12
 MERGED from [androidx.lifecycle:lifecycle-service:2.1.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\3be164bf63002d1f5ad856deff0e8727\lifecycle-service-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.firebaseui:firebase-ui-common:6.0.2] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\4266784295eae66ade88999c9f31cd09\firebase-ui-common-6.0.2\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\518cff37602784329558aec30d012fc2\lifecycle-runtime-2.1.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.1.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\129c866aa116ac6c5c63f86c2b8cd3a6\lifecycle-livedata-2.1.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.1.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\52724065810b509148b3ad039817cff5\lifecycle-livedata-core-2.1.0\AndroidManifest.xml:17:1-22:12
@@ -112,6 +115,8 @@ MERGED from [com.google.android.gms:play-services-auth:17.0.0] C:\Users\serban\.
 MERGED from [com.google.android.gms:play-services-auth:17.0.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\2ab19a01158e055fe3af3828af37848a\play-services-auth-17.0.0\AndroidManifest.xml:22:5-37:19
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.1.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\20be092daf42745473433bfb1fba48b3\lifecycle-extensions-2.1.0\AndroidManifest.xml:22:5-23:19
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.1.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\20be092daf42745473433bfb1fba48b3\lifecycle-extensions-2.1.0\AndroidManifest.xml:22:5-23:19
+MERGED from [de.hdodenhof:circleimageview:3.0.1] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\0b2e5d2810a9e2205584678f02e280f8\circleimageview-3.0.1\AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:3.0.1] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\0b2e5d2810a9e2205584678f02e280f8\circleimageview-3.0.1\AndroidManifest.xml:9:5-20
 MERGED from [com.google.firebase:firebase-auth:19.0.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\c9bdc7138a3d0b8dc6b80dbe7571f130\firebase-auth-19.0.0\AndroidManifest.xml:23:5-40:19
 MERGED from [com.google.firebase:firebase-auth:19.0.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\c9bdc7138a3d0b8dc6b80dbe7571f130\firebase-auth-19.0.0\AndroidManifest.xml:23:5-40:19
 MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\3011de87fc6688213df3d3b67700d344\firebase-auth-interop-18.0.0\AndroidManifest.xml:7:5-8:19
@@ -208,6 +213,8 @@ MERGED from [me.zhanghai.android.materialprogressbar:library:1.6.1] C:\Users\ser
 MERGED from [me.zhanghai.android.materialprogressbar:library:1.6.1] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\0b1c880378a1f10b056a75f8fa1f7d74\library-1.6.1\AndroidManifest.xml:11:5-13:41
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\b128781b27d19bd677962f541282bd49\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\b128781b27d19bd677962f541282bd49\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.firebaseui:firebase-ui-database:6.0.2] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\03ede1837219c04193f1dde8327ad844\firebase-ui-database-6.0.2\AndroidManifest.xml:7:5-9:41
+MERGED from [com.firebaseui:firebase-ui-database:6.0.2] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\03ede1837219c04193f1dde8327ad844\firebase-ui-database-6.0.2\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\c911ba413ea34d47b5b0c5d37ee8baf6\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\c911ba413ea34d47b5b0c5d37ee8baf6\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\86441a77bdd6184b1f28a13229480806\appcompat-resources-1.1.0\AndroidManifest.xml:20:5-22:41
@@ -228,6 +235,8 @@ MERGED from [androidx.lifecycle:lifecycle-extensions:2.1.0] C:\Users\serban\.gra
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.1.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\20be092daf42745473433bfb1fba48b3\lifecycle-extensions-2.1.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\8787ee14b71f4455f9a500c717208c9b\recyclerview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\8787ee14b71f4455f9a500c717208c9b\recyclerview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [de.hdodenhof:circleimageview:3.0.1] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\0b2e5d2810a9e2205584678f02e280f8\circleimageview-3.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:3.0.1] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\0b2e5d2810a9e2205584678f02e280f8\circleimageview-3.0.1\AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.firebase:firebase-auth:19.0.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\c9bdc7138a3d0b8dc6b80dbe7571f130\firebase-auth-19.0.0\AndroidManifest.xml:21:5-44
 MERGED from [com.google.firebase:firebase-auth:19.0.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\c9bdc7138a3d0b8dc6b80dbe7571f130\firebase-auth-19.0.0\AndroidManifest.xml:21:5-44
 MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\3011de87fc6688213df3d3b67700d344\firebase-auth-interop-18.0.0\AndroidManifest.xml:5:5-44
@@ -312,6 +321,8 @@ MERGED from [androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\serban\.gradle
 MERGED from [androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\26b73dff2b4661b12c08248c9840c59e\lifecycle-process-2.1.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-service:2.1.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\3be164bf63002d1f5ad856deff0e8727\lifecycle-service-2.1.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-service:2.1.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\3be164bf63002d1f5ad856deff0e8727\lifecycle-service-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.firebaseui:firebase-ui-common:6.0.2] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\4266784295eae66ade88999c9f31cd09\firebase-ui-common-6.0.2\AndroidManifest.xml:7:5-9:41
+MERGED from [com.firebaseui:firebase-ui-common:6.0.2] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\4266784295eae66ade88999c9f31cd09\firebase-ui-common-6.0.2\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\518cff37602784329558aec30d012fc2\lifecycle-runtime-2.1.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\518cff37602784329558aec30d012fc2\lifecycle-runtime-2.1.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.1.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\129c866aa116ac6c5c63f86c2b8cd3a6\lifecycle-livedata-2.1.0\AndroidManifest.xml:20:5-44
@@ -370,6 +381,8 @@ MERGED from [io.grpc:grpc-android:1.21.0] C:\Users\serban\.gradle\caches\transfo
 		ADDED from [com.firebaseui:firebase-ui-auth:6.0.2] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\179cc489767abd1669a3d3cacfc13a69\firebase-ui-auth-6.0.2\AndroidManifest.xml:12:22-76
 uses-permission#android.permission.INTERNET
 ADDED from [com.firebaseui:firebase-ui-auth:6.0.2] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\179cc489767abd1669a3d3cacfc13a69\firebase-ui-auth-6.0.2\AndroidManifest.xml:13:5-67
+MERGED from [com.firebaseui:firebase-ui-database:6.0.2] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\03ede1837219c04193f1dde8327ad844\firebase-ui-database-6.0.2\AndroidManifest.xml:11:5-67
+MERGED from [com.firebaseui:firebase-ui-database:6.0.2] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\03ede1837219c04193f1dde8327ad844\firebase-ui-database-6.0.2\AndroidManifest.xml:11:5-67
 MERGED from [com.google.firebase:firebase-database:19.1.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\899763582a977a45241cf0f062efd577\firebase-database-19.1.0\AndroidManifest.xml:26:5-67
 MERGED from [com.google.firebase:firebase-database:19.1.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\899763582a977a45241cf0f062efd577\firebase-database-19.1.0\AndroidManifest.xml:26:5-67
 MERGED from [com.google.firebase:firebase-firestore:21.1.1] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\2f9bede6052790fa02bff13084abb6f9\jetified-firebase-firestore-21.1.1\AndroidManifest.xml:14:5-67

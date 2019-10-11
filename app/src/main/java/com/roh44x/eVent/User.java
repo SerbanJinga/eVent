@@ -10,6 +10,7 @@ public class User {
     public String email;
     public List<? extends Chip> tags;
 
+    public User(){}
     public User(String username, String email, List<? extends Chip> tags){
         this.username = username;
         this.email = email;

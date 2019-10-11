@@ -45,6 +45,9 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'com.github.tylersuehr7:chips-input-layout:2.3'
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+    implementation 'com.firebaseui:firebase-ui-database:6.0.2'
+
 
 
 }

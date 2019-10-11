@@ -1,8 +1,15 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:id="@+id/action_page_1"
-        android:enabled="true"
-        android:icon="@drawable/ic_star_checkable_24"
-        android:title="mama"/>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/botton_app_home"
+        android:padding="20dp"
+        android:title="Home"
+        android:icon="@drawable/ic_home_black_24dp"
+        app:showAsAction="ifRoom"/>
+    <item android:id="@+id/bottom_app_add"
+        android:padding="20dp"
+        android:title="Home"
+        android:icon="@drawable/ic_add"
+        app:showAsAction="ifRoom"/>
 
 </menu>

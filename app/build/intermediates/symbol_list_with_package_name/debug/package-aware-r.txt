@@ -174,6 +174,10 @@ attr chip_showDelete
 attr chip_showDetails
 attr chip_textColor
 attr circleCrop
+attr civ_border_color
+attr civ_border_overlay
+attr civ_border_width
+attr civ_circle_background_color
 attr closeIcon
 attr closeIconEnabled
 attr closeIconEndPadding
@@ -1192,12 +1196,17 @@ drawable fui_idp_button_background_twitter
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable home
+drawable ic_add
+drawable ic_add_black_24dp
+drawable ic_home_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_menu
 drawable ic_menu_24
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_star_checkable_24
 drawable mrb_star_border_icon_black_36dp
 drawable mrb_star_icon_black_36dp
 drawable mtrl_snackbar_background
@@ -1216,6 +1225,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable ripple_chip_view
+drawable search
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
@@ -1287,16 +1297,20 @@ id anonymous_button
 id async
 id auto
 id avatar
-id bar
 id barrier
 id beginning
 id blocking
 id bottom
+id bottomAppBar
+id bottom_app_add
+id botton_app_home
 id browser_actions_header_text
 id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
+id btnGoing
+id btnInterested
 id btn_holder
 id buttonPanel
 id button_continue
@@ -1307,6 +1321,7 @@ id button_next
 id button_resend_email
 id button_sign_in
 id cancel_action
+id cat_card_list_item_card
 id center
 id center_horizontal
 id center_vertical
@@ -1333,6 +1348,8 @@ id customPanel
 id dark
 id decor_content_parent
 id default_activity_button
+id description
+id descriptionPost
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -1401,6 +1418,7 @@ id main_tos_and_pp
 id masked
 id media_actions
 id message
+id messagesList
 id middle
 id mini
 id mtrl_child_content_container
@@ -1410,6 +1428,8 @@ id name
 id name_layout
 id navigation_header_container
 id never
+id noGoing
+id noIntersted
 id none
 id normal
 id notification_background
@@ -1430,6 +1450,8 @@ id phone_button
 id phone_layout
 id phone_number
 id pin
+id post
+id postImage
 id progress_circular
 id progress_horizontal
 id radio
@@ -1510,6 +1532,7 @@ id ticker
 id time
 id title
 id titleDividerNoCustom
+id titlePost
 id title_template
 id top
 id topPanel
@@ -1528,6 +1551,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id usernamePost
 id view_offset_helper
 id visible
 id welcome_back_email_link_body
@@ -1597,6 +1621,7 @@ layout abc_tooltip
 layout activity_home
 layout activity_main
 layout activity_tag_chooser
+layout add_fragment
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout chip_view
@@ -1618,6 +1643,8 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
+layout fragment_all_posts
+layout fragment_posts
 layout fui_activity_invisible
 layout fui_activity_register_email
 layout fui_activity_register_phone
@@ -1658,6 +1685,7 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout post
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -2030,6 +2058,7 @@ style Base_Widget_Design_TabLayout
 style Base_Widget_MaterialComponents_Chip
 style Base_Widget_MaterialComponents_TextInputEditText
 style Base_Widget_MaterialComponents_TextInputLayout
+style BottomMenuColor
 style CardView
 style CardView_Dark
 style CardView_Light
@@ -2423,7 +2452,7 @@ styleable CardView android_minWidth android_minHeight cardBackgroundColor cardCo
 styleable Chip android_textAppearance android_ellipsize android_maxWidth android_text android_checkable checkedIcon checkedIconEnabled checkedIconVisible chipBackgroundColor chipCornerRadius chipEndPadding chipIcon chipIconEnabled chipIconSize chipIconTint chipIconVisible chipMinHeight chipStartPadding chipStrokeColor chipStrokeWidth closeIcon closeIconEnabled closeIconEndPadding closeIconSize closeIconStartPadding closeIconTint closeIconVisible hideMotionSpec iconEndPadding iconStartPadding rippleColor showMotionSpec textEndPadding textStartPadding
 styleable ChipGroup checkedChip chipSpacing chipSpacingHorizontal chipSpacingVertical singleLine singleSelection
 styleable ChipsInputLayout android_textColor android_textColorHint android_hint allowCustomChips chip_backgroundColor chip_deleteIcon chip_deleteIconColor chip_showAvatar chip_showDelete chip_showDetails chip_textColor details_backgroundColor details_deleteIconColor details_textColor filter_backgroundColor filter_elevation filter_textColor hideKeyboardOnChipClick maxRows
-styleable CircleImageView borderColor borderOverlay borderWidth fillColor
+styleable CircleImageView borderColor borderOverlay borderWidth civ_border_color civ_border_overlay civ_border_width civ_circle_background_color fillColor
 styleable CollapsingToolbarLayout collapsedTitleGravity collapsedTitleTextAppearance contentScrim expandedTitleGravity expandedTitleMargin expandedTitleMarginBottom expandedTitleMarginEnd expandedTitleMarginStart expandedTitleMarginTop expandedTitleTextAppearance scrimAnimationDuration scrimVisibleHeightTrigger statusBarScrim title titleEnabled toolbarId
 styleable CollapsingToolbarLayout_Layout layout_collapseMode layout_collapseParallaxMultiplier
 styleable ColorStateListItem android_color android_alpha alpha
