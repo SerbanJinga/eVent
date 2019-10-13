@@ -1,15 +1,19 @@
 [
     {
+        "merged": "C:\\Users\\serban\\SignActivity\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_going_filled.png.flat",
+        "source": "C:\\Users\\serban\\SignActivity\\app\\src\\main\\res\\drawable-anydpi\\going_filled.png"
+    },
+    {
         "merged": "C:\\Users\\serban\\SignActivity\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_add_black_24dp.png.flat",
         "source": "C:\\Users\\serban\\SignActivity\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_add_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\serban\\SignActivity\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_home.png.flat",
-        "source": "C:\\Users\\serban\\SignActivity\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\home.png"
-    },
-    {
         "merged": "C:\\Users\\serban\\SignActivity\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\serban\\SignActivity\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\serban\\SignActivity\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_home.png.flat",
+        "source": "C:\\Users\\serban\\SignActivity\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\home.png"
     },
     {
         "merged": "C:\\Users\\serban\\SignActivity\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
@@ -208,6 +212,10 @@
         "source": "C:\\Users\\serban\\SignActivity\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_home_black_24dp.png"
     },
     {
+        "merged": "C:\\Users\\serban\\SignActivity\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_going.png.flat",
+        "source": "C:\\Users\\serban\\SignActivity\\app\\src\\main\\res\\drawable-anydpi\\going.png"
+    },
+    {
         "merged": "C:\\Users\\serban\\SignActivity\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_all_posts.xml.flat",
         "source": "C:\\Users\\serban\\SignActivity\\app\\src\\main\\res\\layout\\fragment_all_posts.xml"
     },
@@ -252,6 +260,10 @@
         "source": "C:\\Users\\serban\\SignActivity\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_menu_24.xml"
     },
     {
+        "merged": "C:\\Users\\serban\\SignActivity\\app\\build\\intermediates\\res\\merged\\debug\\font_regular.ttf.flat",
+        "source": "C:\\Users\\serban\\SignActivity\\app\\src\\main\\res\\font\\regular.ttf"
+    },
+    {
         "merged": "C:\\Users\\serban\\SignActivity\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_home_black_24dp.xml.flat",
         "source": "C:\\Users\\serban\\SignActivity\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_home_black_24dp.xml"
     },
@@ -274,6 +286,10 @@
     {
         "merged": "C:\\Users\\serban\\SignActivity\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_add.png.flat",
         "source": "C:\\Users\\serban\\SignActivity\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_add.png"
+    },
+    {
+        "merged": "C:\\Users\\serban\\SignActivity\\app\\build\\intermediates\\res\\merged\\debug\\font_semibold.ttf.flat",
+        "source": "C:\\Users\\serban\\SignActivity\\app\\src\\main\\res\\font\\semibold.ttf"
     },
     {
         "merged": "C:\\Users\\serban\\SignActivity\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_home.png.flat",

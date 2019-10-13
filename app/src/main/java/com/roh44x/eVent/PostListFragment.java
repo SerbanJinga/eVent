@@ -115,8 +115,8 @@ public abstract class PostListFragment extends Fragment {
                         DatabaseReference userPostRef = mDatabase.child("user-posts").child(model.uid).child(postRef.getKey());
 
                         // Run two transactions
-                        onStarClicked(globalPostRef);
-                        onStarClicked(userPostRef);
+                        onGoingClicked(globalPostRef);
+                        onGoingClicked(userPostRef);
                     }
                 });
             }
@@ -125,7 +125,7 @@ public abstract class PostListFragment extends Fragment {
     }
 
     // [START post_stars_transaction]
-    private void onStarClicked(DatabaseReference postRef) {
+    private void onGoingClicked(DatabaseReference postRef) {
         postRef.runTransaction(new Transaction.Handler() {
             @Override
             public Transaction.Result doTransaction(MutableData mutableData) {
@@ -145,16 +145,6 @@ public abstract class PostListFragment extends Fragment {
                 }
 
 
-                if (p.interested.containsKey(getUid())) {
-                    // Unstar the post and remove self from stars
-                    p.interestedInNumber = p.interestedInNumber - 1;
-                    p.interested.remove(getUid());
-                } else {
-                    // Star the post and add self to stars
-                    p.interestedInNumber = p.interestedInNumber + 1;
-                    p.interested.put(getUid(), true);
-                }
-
                 // Set value and report transaction success
                 mutableData.setValue(p);
                 return Transaction.success(mutableData);
@@ -169,6 +159,7 @@ public abstract class PostListFragment extends Fragment {
         });
     }
     // [END post_stars_transaction]
+
 
 
     @Override

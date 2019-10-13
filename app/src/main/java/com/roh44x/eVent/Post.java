@@ -1,5 +1,7 @@
 package com.roh44x.eVent;
 
+import android.net.Uri;
+
 import com.google.firebase.database.Exclude;
 import com.google.firebase.database.IgnoreExtraProperties;
 
@@ -14,14 +16,16 @@ public class Post {
     public String description;
     public int goingToNumber = 0;
     public int interestedInNumber = 0;
+    public String filePath;
     public Map<String, Boolean> going = new HashMap<>();
     public Map<String, Boolean> interested = new HashMap<>();
 
-    public Post(String uid, String author, String title, String description) {
+    public Post(String uid, String author, String title, String description, String filePath) {
         this.uid = uid;
         this.author = author;
         this.title = title;
         this.description = description;
+        this.filePath = filePath;
     }
 
     public Post(){}
@@ -36,6 +40,7 @@ public class Post {
         result.put("interestedInNumber", interestedInNumber);
         result.put("going", going);
         result.put("interested", interested);
+        result.put("filePath", filePath);
 
         return result;
     }

@@ -1,11 +1,17 @@
 package com.roh44x.eVent;
 
+import android.graphics.Bitmap;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 
 public class PostViewHolder extends RecyclerView.ViewHolder {
 
@@ -16,6 +22,7 @@ public class PostViewHolder extends RecyclerView.ViewHolder {
     public Button btnInterested;
     public TextView noGoing;
     public TextView noIntersted;
+    public ImageView imagePost;
 
     public PostViewHolder(@NonNull View itemView) {
         super(itemView);
@@ -27,6 +34,7 @@ public class PostViewHolder extends RecyclerView.ViewHolder {
         btnInterested = itemView.findViewById(R.id.btnInterested);
         noGoing = itemView.findViewById(R.id.noGoing);
         noIntersted = itemView.findViewById(R.id.noIntersted);
+        imagePost = itemView.findViewById(R.id.postImage);
 
     }
 
@@ -36,6 +44,11 @@ public class PostViewHolder extends RecyclerView.ViewHolder {
         description.setText(post.description);
         noGoing.setText(String.valueOf(post.goingToNumber));
         noIntersted.setText(String.valueOf(post.interestedInNumber));
+        Glide.with(imagePost.getContext())
+                .load(post.filePath)
+                .into(imagePost);
+
+
 
         btnGoing.setOnClickListener(clickListener);
         btnInterested.setOnClickListener(clickListener);

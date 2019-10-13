@@ -17,6 +17,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
+    <ImageView
+        android:id="@+id/imageForPost"
+        android:layout_width="344dp"
+        android:layout_height="194dp"/>
+
+    <Button
+        android:id="@+id/uploadPicture"
+        android:text="Upload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
     <Button
         android:id="@+id/post"
         android:textSize="20dp"
