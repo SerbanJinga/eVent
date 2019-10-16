@@ -142,6 +142,7 @@ attr cardPreventCornerOverlap
 attr cardUseCompatPadding
 attr cardViewStyle
 attr chainUseRtl
+attr changeStateOnTap
 attr checkboxStyle
 attr checkedChip
 attr checkedIcon
@@ -497,6 +498,7 @@ attr navigationIcon
 attr navigationMode
 attr navigationViewStyle
 attr numericModifiers
+attr offsetDistance
 attr overlapAnchor
 attr paddingBottomNoButtons
 attr paddingEnd
@@ -515,6 +517,7 @@ attr popupTheme
 attr popupWindowStyle
 attr preserveIconSpacing
 attr pressedTranslationZ
+attr previewOffsetDistance
 attr progressBarPadding
 attr progressBarStyle
 attr queryBackground
@@ -535,6 +538,8 @@ attr searchViewStyle
 attr seekBarStyle
 attr selectableItemBackground
 attr selectableItemBackgroundBorderless
+attr shadowDrawable
+attr shadowSize
 attr showAsAction
 attr showDividers
 attr showMotionSpec
@@ -560,6 +565,7 @@ attr state_liftable
 attr state_lifted
 attr statusBarBackground
 attr statusBarScrim
+attr stickTo
 attr strokeColor
 attr strokeWidth
 attr subMenuArrow
@@ -1210,6 +1216,7 @@ drawable common_google_signin_btn_text_light_normal_background
 drawable crop_image_menu_flip
 drawable crop_image_menu_rotate_left
 drawable crop_image_menu_rotate_right
+drawable da
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1247,6 +1254,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_star_checkable_24
+drawable layout_bg
 drawable mrb_star_border_icon_black_36dp
 drawable mrb_star_icon_black_36dp
 drawable mtrl_snackbar_background
@@ -1266,6 +1274,7 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable ripple_chip_view
 drawable search
+drawable sidebar_shadow
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 font regular
@@ -1348,6 +1357,7 @@ id blocking
 id bottom
 id bottomAppBar
 id bottom_app_add
+id bottom_sheet1
 id botton_app_home
 id browser_actions_header_text
 id browser_actions_menu_item_icon
@@ -1356,6 +1366,7 @@ id browser_actions_menu_items
 id browser_actions_menu_view
 id btnGoing
 id btnInterested
+id btnView
 id btn_holder
 id buttonPanel
 id button_continue
@@ -1388,6 +1399,7 @@ id container
 id content
 id contentPanel
 id coordinator
+id copyLinearLayout
 id country_list
 id cropImageView
 id crop_image_menu_crop
@@ -1515,6 +1527,7 @@ id progress_horizontal
 id radio
 id rectangle
 id recycler
+id recyclerView1
 id resend_barrier
 id resend_code
 id right
@@ -1544,6 +1557,7 @@ id select_dialog_listview
 id selected
 id send_code
 id send_sms_tos
+id shareLinearLayout
 id shortcut
 id showCustom
 id showHome
@@ -1609,6 +1623,7 @@ id unchecked
 id uniform
 id unlabeled
 id up
+id uploadLinearLayout
 id uploadPicture
 id useLogo
 id usernamePost
@@ -1682,6 +1697,7 @@ layout activity_home
 layout activity_main
 layout activity_tag_chooser
 layout add_fragment
+layout bottomsheet_content
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout chip_view
@@ -1732,6 +1748,7 @@ layout fui_welcome_back_idp_prompt_layout
 layout fui_welcome_back_password_prompt_layout
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
+layout nav_header
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action
@@ -1752,8 +1769,10 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+layout test
 menu crop_image_menu
 menu menu
+menu my_navigation_items
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals fui_error_weak_password
@@ -2568,6 +2587,7 @@ styleable ScrimInsetsFrameLayout insetForeground
 styleable ScrollingViewBehavior_Layout behavior_overlapTop
 styleable SearchView android_focusable android_maxWidth android_inputType android_imeOptions closeIcon commitIcon defaultQueryHint goIcon iconifiedByDefault layout queryBackground queryHint searchHintIcon searchIcon submitBackground suggestionRowLayout voiceIcon
 styleable SignInButton buttonSize colorScheme scopeUris
+styleable SlidingLayer changeStateOnTap offsetDistance previewOffsetDistance shadowDrawable shadowSize stickTo
 styleable Snackbar snackbarButtonStyle snackbarStyle
 styleable SnackbarLayout android_maxWidth elevation maxActionInlineWidth
 styleable SpacedEditText spacingProportion

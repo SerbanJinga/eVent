@@ -4,7 +4,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.roh44x.eVent"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -52,6 +52,7 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
     implementation 'id.zelory:compressor:2.1.0'
     implementation 'com.theartofdev.edmodo:android-image-cropper:2.6.0'
+    implementation 'com.wunderlist:sliding-layer:1.2.5'
 
 
 

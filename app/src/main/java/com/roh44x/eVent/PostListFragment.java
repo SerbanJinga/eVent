@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -21,6 +22,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.MutableData;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.Transaction;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public abstract class PostListFragment extends Fragment {
 
@@ -33,6 +38,7 @@ public abstract class PostListFragment extends Fragment {
     private FirebaseRecyclerAdapter<Post, PostViewHolder> mAdapter;
     private RecyclerView mRecycler;
     private LinearLayoutManager mManager;
+    private DatabaseReference userDatabase;
 
     public PostListFragment() {}
 
@@ -42,6 +48,7 @@ public abstract class PostListFragment extends Fragment {
         super.onCreateView(inflater, container, savedInstanceState);
         View rootView = inflater.inflate(R.layout.fragment_all_posts, container, false);
 
+        userDatabase = FirebaseDatabase.getInstance().getReference().child("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
         // [START create_database_reference]
         mDatabase = FirebaseDatabase.getInstance().getReference();
         // [END create_database_reference]
@@ -93,18 +100,8 @@ public abstract class PostListFragment extends Fragment {
                     }
                 });
 
-                // Determine if the current user has liked this post and set UI accordingly
-                if (model.going.containsKey(getUid())) {
-                    viewHolder.btnGoing.setText("da");
-                } else {
-                    viewHolder.btnGoing.setText("nu");
-                }
 
-                if (model.interested.containsKey(getUid())) {
-                    viewHolder.btnInterested.setText("da");
-                } else {
-                    viewHolder.btnInterested.setText("nu");
-                }
+
 
                 // Bind Post to ViewHolder, setting OnClickListener for the star button
                 viewHolder.bindToPost(model, new View.OnClickListener() {
@@ -118,14 +115,24 @@ public abstract class PostListFragment extends Fragment {
                         onGoingClicked(globalPostRef);
                         onGoingClicked(userPostRef);
                     }
+                }, new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        DatabaseReference globalPostRef = mDatabase.child("posts").child(postRef.getKey());
+                        DatabaseReference userPostRef = mDatabase.child("user-posts").child(model.uid).child(postRef.getKey());
+
+                        // Run two transactions
+                        onInterested(globalPostRef);
+                        onInterested(userPostRef);
+                    }
                 });
+
             }
         };
         mRecycler.setAdapter(mAdapter);
     }
 
-    // [START post_stars_transaction]
-    private void onGoingClicked(DatabaseReference postRef) {
+    private void onInterested(final DatabaseReference postRef) {
         postRef.runTransaction(new Transaction.Handler() {
             @Override
             public Transaction.Result doTransaction(MutableData mutableData) {
@@ -133,6 +140,48 @@ public abstract class PostListFragment extends Fragment {
                 if (p == null) {
                     return Transaction.success(mutableData);
                 }
+                final String postUid = postRef.getKey();
+
+                if (p.interested.containsKey(getUid())) {
+                    // Unstar the post and remove self from stars
+                    p.interestedInNumber = p.interestedInNumber - 1;
+                    p.interested.remove(getUid());
+
+
+                } else {
+                    // Star the post and add self to stars
+                    p.interestedInNumber = p.interestedInNumber + 1;
+                    p.interested.put(getUid(), true);
+                    userDatabase.child("interested_posts_id_list").child(postUid).setValue(true);
+
+                }
+
+
+                // Set value and report transaction success
+                mutableData.setValue(p);
+                return Transaction.success(mutableData);
+            }
+
+            @Override
+            public void onComplete(DatabaseError databaseError, boolean b,
+                                   DataSnapshot dataSnapshot) {
+                // Transaction completed
+                Log.d(TAG, "postTransaction:onComplete:" + databaseError);
+            }
+        });
+    }
+    // [END post_stars_transaction]
+    // [START post_stars_transaction]
+    private void onGoingClicked(final DatabaseReference postRef) {
+        postRef.runTransaction(new Transaction.Handler() {
+            @Override
+            public Transaction.Result doTransaction(MutableData mutableData) {
+                Post p = mutableData.getValue(Post.class);
+                if (p == null) {
+                    return Transaction.success(mutableData);
+                }
+                final String postUid = postRef.getKey();
+
 
                 if (p.going.containsKey(getUid())) {
                     // Unstar the post and remove self from stars
@@ -142,6 +191,7 @@ public abstract class PostListFragment extends Fragment {
                     // Star the post and add self to stars
                     p.goingToNumber = p.goingToNumber + 1;
                     p.going.put(getUid(), true);
+                    userDatabase.child("going_posts_id_list").child(postUid).setValue(true);
                 }
 
 

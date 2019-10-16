@@ -13,7 +13,13 @@
         android:hint="Alege taguri"
         android:textColorHint="#757575"
         android:textColor="#212121"/>
+    <View
+        android:background="#f0f0f0"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
     <Button
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:fontFamily="@font/regular"
         android:layout_gravity="right"
         android:layout_margin="10dp"
         android:id="@+id/button_continue"

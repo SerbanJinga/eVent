@@ -1,28 +1,40 @@
 package com.roh44x.eVent;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.LinearLayout;
 
 import com.google.android.material.bottomappbar.BottomAppBar;
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.navigation.NavigationView;
 
 public class HomeActivity extends AppCompatActivity implements Toolbar.OnMenuItemClickListener {
 
     private BottomAppBar bottomBar;
+    private BottomSheetDialog bottomSheetDialog;
     private FloatingActionButton floatingActionButton;
+    private LinearLayout shareLinearLayout, uploadLinearLayout, copyLinearLayout;
+    private View bottomSheet;
+    BottomSheetBehavior behavior;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         floatingActionButton = findViewById(R.id.fab);
         bottomBar = findViewById(R.id.bottomAppBar);
-
         setSupportActionBar(bottomBar);
 
         loadFragment(new HomeFragment());
@@ -35,6 +47,10 @@ public class HomeActivity extends AppCompatActivity implements Toolbar.OnMenuIte
 
             }
         });
+
+
+
+
 
     }
 
@@ -66,8 +82,10 @@ public class HomeActivity extends AppCompatActivity implements Toolbar.OnMenuIte
             case R.id.bottom_app_add:
                 fragment = new AddFragment();
                 break;
+
         }
 
         return loadFragment(fragment);
     }
+
 }

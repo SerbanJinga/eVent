@@ -14,6 +14,7 @@ MERGED from [com.theartofdev.edmodo:android-image-cropper:2.6.0] C:\Users\serban
 MERGED from [me.zhanghai.android.materialprogressbar:library:1.6.1] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\0b1c880378a1f10b056a75f8fa1f7d74\library-1.6.1\AndroidManifest.xml:6:1-15:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\b128781b27d19bd677962f541282bd49\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.firebaseui:firebase-ui-database:6.0.2] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\03ede1837219c04193f1dde8327ad844\firebase-ui-database-6.0.2\AndroidManifest.xml:2:1-13:12
+MERGED from [com.wunderlist:sliding-layer:1.2.5] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\f19ad96f7091de084eae5613040815f5\jetified-sliding-layer-1.2.5\AndroidManifest.xml:17:1-29:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\c911ba413ea34d47b5b0c5d37ee8baf6\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\86441a77bdd6184b1f28a13229480806\appcompat-resources-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\5e01aaef64c672842dc0a72e38655b23\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
@@ -137,6 +138,8 @@ MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\serban\.
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\3e50d18d10caf0c84c3b798a29d3be52\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\5e3d5ef95f8db1356b43f42a975f3e4a\material-1.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\5e3d5ef95f8db1356b43f42a975f3e4a\material-1.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.wunderlist:sliding-layer:1.2.5] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\f19ad96f7091de084eae5613040815f5\jetified-sliding-layer-1.2.5\AndroidManifest.xml:27:5-20
+MERGED from [com.wunderlist:sliding-layer:1.2.5] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\f19ad96f7091de084eae5613040815f5\jetified-sliding-layer-1.2.5\AndroidManifest.xml:27:5-20
 MERGED from [com.google.firebase:firebase-core:17.2.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\84a5ac2de63fe4cc3f1568a93a84d048\firebase-core-17.2.0\AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-core:17.2.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\84a5ac2de63fe4cc3f1568a93a84d048\firebase-core-17.2.0\AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-database:19.1.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\899763582a977a45241cf0f062efd577\firebase-database-19.1.0\AndroidManifest.xml:28:5-36:19
@@ -257,6 +260,8 @@ MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\serban\.gradle\caches\
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\b128781b27d19bd677962f541282bd49\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.firebaseui:firebase-ui-database:6.0.2] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\03ede1837219c04193f1dde8327ad844\firebase-ui-database-6.0.2\AndroidManifest.xml:7:5-9:41
 MERGED from [com.firebaseui:firebase-ui-database:6.0.2] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\03ede1837219c04193f1dde8327ad844\firebase-ui-database-6.0.2\AndroidManifest.xml:7:5-9:41
+MERGED from [com.wunderlist:sliding-layer:1.2.5] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\f19ad96f7091de084eae5613040815f5\jetified-sliding-layer-1.2.5\AndroidManifest.xml:23:5-25:41
+MERGED from [com.wunderlist:sliding-layer:1.2.5] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\f19ad96f7091de084eae5613040815f5\jetified-sliding-layer-1.2.5\AndroidManifest.xml:23:5-25:41
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\c911ba413ea34d47b5b0c5d37ee8baf6\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\c911ba413ea34d47b5b0c5d37ee8baf6\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\serban\.gradle\caches\transforms-2\files-2.1\86441a77bdd6184b1f28a13229480806\appcompat-resources-1.1.0\AndroidManifest.xml:20:5-22:41

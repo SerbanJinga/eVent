@@ -38,7 +38,7 @@ public class PostViewHolder extends RecyclerView.ViewHolder {
 
     }
 
-    public void bindToPost(Post post, View.OnClickListener clickListener){
+    public void bindToPost(Post post, View.OnClickListener goingClickListener, View.OnClickListener interestedClickListener){
         title.setText(post.title);
         username.setText(post.author);
         description.setText(post.description);
@@ -50,7 +50,7 @@ public class PostViewHolder extends RecyclerView.ViewHolder {
 
 
 
-        btnGoing.setOnClickListener(clickListener);
-        btnInterested.setOnClickListener(clickListener);
+        btnGoing.setOnClickListener(goingClickListener);
+        btnInterested.setOnClickListener(interestedClickListener);
     }
 }

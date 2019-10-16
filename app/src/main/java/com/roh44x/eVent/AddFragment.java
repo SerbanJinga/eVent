@@ -141,7 +141,7 @@ public class AddFragment extends Fragment {
 
         Map<String, Object> childUpdates = new HashMap<>();
         childUpdates.put("/posts/" + key, postValues);
-        childUpdates.put("/user-posts/" + userId + "/" + key, postValues);
+//        childUpdates.put("/user-posts/" + userId + "/" + key, postValues);
 
         postDatabase.updateChildren(childUpdates);    }
     private void chooseImage() {
