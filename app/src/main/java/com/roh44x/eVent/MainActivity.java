@@ -1,5 +1,6 @@
 package com.roh44x.eVent;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,13 +12,17 @@ import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.auth.ErrorCodes;
 import com.firebase.ui.auth.IdpResponse;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+
 
     //code for signing in
     private static final int RC_SIGN_IN = 123;
@@ -80,7 +85,22 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(this, response.getError().getMessage(), Toast.LENGTH_SHORT).show();
                 }
             }else{
-                startActivity(new Intent(MainActivity.this, TagChooser.class));
+                userDatabase.child(mAuth.getCurrentUser().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        if(dataSnapshot.exists()){
+                            startActivity(new Intent(MainActivity.this, HomeActivity.class));
+                        }else{
+                            startActivity(new Intent(MainActivity.this, TagChooser.class));
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+//                startActivity(new Intent(MainActivity.this, TagChooser.class));
             }
         }
     }

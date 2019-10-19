@@ -1,36 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <EditText
-        android:id="@+id/title"
-        android:textSize="20dp"
-        android:hint="Title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-    <EditText
-        android:id="@+id/description"
-        android:textSize="20dp"
-        android:hint="Description"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <ImageView
-        android:id="@+id/imageForPost"
-        android:layout_width="344dp"
-        android:layout_height="194dp"/>
-
-    <Button
-        android:id="@+id/uploadPicture"
-        android:text="Upload"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-    <Button
-        android:id="@+id/post"
-        android:textSize="20dp"
-        android:text="post"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
 </LinearLayout>

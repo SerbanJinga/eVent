@@ -7,6 +7,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -22,12 +23,11 @@ import com.google.android.material.navigation.NavigationView;
 
 public class HomeActivity extends AppCompatActivity implements Toolbar.OnMenuItemClickListener {
 
+    BottomSheetBehavior bottomSheetBehavior;
     private BottomAppBar bottomBar;
     private BottomSheetDialog bottomSheetDialog;
     private FloatingActionButton floatingActionButton;
     private LinearLayout shareLinearLayout, uploadLinearLayout, copyLinearLayout;
-    private View bottomSheet;
-    BottomSheetBehavior behavior;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,13 +41,14 @@ public class HomeActivity extends AppCompatActivity implements Toolbar.OnMenuIte
 
         bottomBar.setOnMenuItemClickListener(this);
 
+
+
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
             }
         });
-
 
 
 
@@ -80,7 +81,7 @@ public class HomeActivity extends AppCompatActivity implements Toolbar.OnMenuIte
                 fragment = new HomeFragment();
                 break;
             case R.id.bottom_app_add:
-                fragment = new AddFragment();
+                startActivity(new Intent(this, AddActivity.class));
                 break;
 
         }

@@ -16,6 +16,10 @@
         "source": "C:\\Users\\serban\\SignActivity\\app\\src\\main\\res\\drawable-anydpi\\add.xml"
     },
     {
+        "merged": "C:\\Users\\serban\\SignActivity\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_pick_place.xml.flat",
+        "source": "C:\\Users\\serban\\SignActivity\\app\\src\\main\\res\\layout\\activity_pick_place.xml"
+    },
+    {
         "merged": "C:\\Users\\serban\\SignActivity\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\serban\\SignActivity\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
@@ -34,6 +38,10 @@
     {
         "merged": "C:\\Users\\serban\\SignActivity\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\serban\\SignActivity\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\serban\\SignActivity\\app\\build\\intermediates\\res\\merged\\debug\\raw_map_style.json.flat",
+        "source": "C:\\Users\\serban\\SignActivity\\app\\src\\main\\res\\raw\\map_style.json"
     },
     {
         "merged": "C:\\Users\\serban\\SignActivity\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
@@ -88,12 +96,16 @@
         "source": "C:\\Users\\serban\\SignActivity\\app\\src\\main\\res\\drawable-xhdpi\\search.png"
     },
     {
+        "merged": "C:\\Users\\serban\\SignActivity\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_home.png.flat",
+        "source": "C:\\Users\\serban\\SignActivity\\app\\src\\main\\res\\drawable-mdpi\\home.png"
+    },
+    {
         "merged": "C:\\Users\\serban\\SignActivity\\app\\build\\intermediates\\res\\merged\\debug\\layout_add_fragment.xml.flat",
         "source": "C:\\Users\\serban\\SignActivity\\app\\src\\main\\res\\layout\\add_fragment.xml"
     },
     {
-        "merged": "C:\\Users\\serban\\SignActivity\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_home.png.flat",
-        "source": "C:\\Users\\serban\\SignActivity\\app\\src\\main\\res\\drawable-mdpi\\home.png"
+        "merged": "C:\\Users\\serban\\SignActivity\\app\\build\\intermediates\\res\\merged\\debug\\menu_map.xml.flat",
+        "source": "C:\\Users\\serban\\SignActivity\\app\\src\\main\\res\\menu\\map.xml"
     },
     {
         "merged": "C:\\Users\\serban\\SignActivity\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_search.png.flat",
@@ -102,6 +114,10 @@
     {
         "merged": "C:\\Users\\serban\\SignActivity\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_menu.xml.flat",
         "source": "C:\\Users\\serban\\SignActivity\\app\\src\\main\\res\\drawable\\ic_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\serban\\SignActivity\\app\\build\\intermediates\\res\\merged\\debug\\layout_bottom_design.xml.flat",
+        "source": "C:\\Users\\serban\\SignActivity\\app\\src\\main\\res\\layout\\bottom_design.xml"
     },
     {
         "merged": "C:\\Users\\serban\\SignActivity\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
@@ -148,8 +164,16 @@
         "source": "C:\\Users\\serban\\SignActivity\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\Users\\serban\\SignActivity\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_add.xml.flat",
+        "source": "C:\\Users\\serban\\SignActivity\\app\\src\\main\\res\\layout\\activity_add.xml"
+    },
+    {
         "merged": "C:\\Users\\serban\\SignActivity\\app\\build\\intermediates\\res\\merged\\debug\\font_regular.ttf.flat",
         "source": "C:\\Users\\serban\\SignActivity\\app\\src\\main\\res\\font\\regular.ttf"
+    },
+    {
+        "merged": "C:\\Users\\serban\\SignActivity\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_post_detail.xml.flat",
+        "source": "C:\\Users\\serban\\SignActivity\\app\\src\\main\\res\\layout\\activity_post_detail.xml"
     },
     {
         "merged": "C:\\Users\\serban\\SignActivity\\app\\build\\intermediates\\res\\merged\\debug\\font_semibold.ttf.flat",

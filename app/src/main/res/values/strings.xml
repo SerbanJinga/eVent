@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">SignActivity</string>
     <string name="chip">Chip</string>
+    <string name="google_maps_key">AIzaSyCYXA85p9XJuMs5Bsm5HnCBW1t4ocTMKhs</string>
+    <string name="default_info_title">default</string>
+    <string name="default_info_snippet">snippet</string>
 </resources>

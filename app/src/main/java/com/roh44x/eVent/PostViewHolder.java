@@ -23,6 +23,7 @@ public class PostViewHolder extends RecyclerView.ViewHolder {
     public TextView noGoing;
     public TextView noIntersted;
     public ImageView imagePost;
+    public TextView dateEvent;
 
     public PostViewHolder(@NonNull View itemView) {
         super(itemView);
@@ -35,7 +36,7 @@ public class PostViewHolder extends RecyclerView.ViewHolder {
         noGoing = itemView.findViewById(R.id.noGoing);
         noIntersted = itemView.findViewById(R.id.noIntersted);
         imagePost = itemView.findViewById(R.id.postImage);
-
+        dateEvent = itemView.findViewById(R.id.dateEvent);
     }
 
     public void bindToPost(Post post, View.OnClickListener goingClickListener, View.OnClickListener interestedClickListener){
@@ -43,6 +44,7 @@ public class PostViewHolder extends RecyclerView.ViewHolder {
         username.setText(post.author);
         description.setText(post.description);
         noGoing.setText(String.valueOf(post.goingToNumber));
+        dateEvent.setText(post.dateEvent);
         noIntersted.setText(String.valueOf(post.interestedInNumber));
         Glide.with(imagePost.getContext())
                 .load(post.filePath)

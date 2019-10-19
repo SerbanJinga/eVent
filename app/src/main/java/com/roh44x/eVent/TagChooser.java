@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TabHost;
@@ -22,17 +23,22 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.tylersuehr.chips.Chip;
 import com.tylersuehr.chips.ChipsInputLayout;
 
+import org.json.JSONObject;
+
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class TagChooser extends AppCompatActivity implements TagAdapter.OnContactClickListener{
     private TagAdapter contactAdapter;
     private ChipsInputLayout chipsInput;
     private Button continueButton;
     private FirebaseAuth mAuth;
-    private DatabaseReference mDatabase;
+    private DatabaseReference mDatabase, tagDatabase;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +46,7 @@ public class TagChooser extends AppCompatActivity implements TagAdapter.OnContac
 
         mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference().child("Users");
+
         continueButton = findViewById(R.id.button_continue);
 
         // Setup the recycler
@@ -106,9 +113,33 @@ public class TagChooser extends AppCompatActivity implements TagAdapter.OnContac
         continueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                User user = new User(mAuth.getCurrentUser().getDisplayName(), mAuth.getCurrentUser().getEmail(), chipsInput.getSelectedChips());
-                mDatabase.child(mAuth.getCurrentUser().getUid()).setValue(user);
-                startActivity(new Intent(TagChooser.this, HomeActivity.class));
+                Log.v("debugare", "DEBUGARE DE CONTROL");
+                /*Map<String, String> userMap = new HashMap<String, String>();
+                JSONObject jsonObject = new JSONObject();
+                //jsonObject.put("0", tag);
+
+                List<? extends Chip> chips = chipsInput.getFilteredChips();
+                Log.d("debugare", String.valueOf(chips.size()));
+                for(Chip i : chips){
+                    Log.v("debugare", i.getTitle());
+                    userMap.put(i.getTitle(),"true");
+                }*/
+                List<Map<String, String>> tags = new ArrayList<Map<String, String>>();
+                for (Chip chip :
+                        chipsInput.getSelectedChips()) {
+                    Map<String, String> mapTag = new HashMap<String, String>();
+                    mapTag.put("title", chip.getTitle());
+                    mapTag.put("filtrable", "true");
+                    tags.add(mapTag);
+                }
+                if (chipsInput.getSelectedChips().size() <= 2) {
+                    Toast.makeText(TagChooser.this, "Introdu cel putin 3 taguri", Toast.LENGTH_SHORT).show();
+                } else {
+                    User user = new User(mAuth.getCurrentUser().getDisplayName(), mAuth.getCurrentUser().getEmail(), tags, true);
+                    Log.d("debugare", String.valueOf(chipsInput.getSelectedChips().size()));
+                    mDatabase.child(mAuth.getCurrentUser().getUid()).setValue(user);
+                    startActivity(new Intent(TagChooser.this, HomeActivity.class));
+                }
             }
         });
     }

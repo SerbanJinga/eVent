@@ -72,9 +72,12 @@ public abstract class PostListFragment extends Fragment {
         // Set up FirebaseRecyclerAdapter with the Query
         Query postsQuery = getQuery(mDatabase);
 
+
         FirebaseRecyclerOptions options = new FirebaseRecyclerOptions.Builder<Post>()
                 .setQuery(postsQuery, Post.class)
                 .build();
+
+
 
         mAdapter = new FirebaseRecyclerAdapter<Post, PostViewHolder>(options) {
 
@@ -94,13 +97,18 @@ public abstract class PostListFragment extends Fragment {
                     @Override
                     public void onClick(View v) {
 //                        // Launch PostDetailActivity
-//                        Intent intent = new Intent(getActivity(), PostDetailActivity.class);
-//                        intent.putExtra(PostDetailActivity.EXTRA_POST_KEY, postKey);
-//                        startActivity(intent);
+                        Intent intent = new Intent(getActivity(), PostDetailActivity.class);
+                        intent.putExtra(PostDetailActivity.EXTRA_POST_KEY, postKey);
+                        startActivity(intent);
                     }
                 });
+                //TODO HAI MAI REPEDE
+                if(model.going.containsKey(getUid())){
+                    viewHolder.btnGoing.setCompoundDrawablesWithIntrinsicBounds(R.drawable.going_filled, 0, 0, 0);
+                }else{
+                    viewHolder.btnGoing.setCompoundDrawablesWithIntrinsicBounds(R.drawable.going, 0, 0, 0);
 
-
+                }
 
 
                 // Bind Post to ViewHolder, setting OnClickListener for the star button
@@ -147,6 +155,7 @@ public abstract class PostListFragment extends Fragment {
                     p.interestedInNumber = p.interestedInNumber - 1;
                     p.interested.remove(getUid());
 
+                    userDatabase.child("interested_posts_id_list").child(postUid).removeValue();
 
                 } else {
                     // Star the post and add self to stars
@@ -181,12 +190,11 @@ public abstract class PostListFragment extends Fragment {
                     return Transaction.success(mutableData);
                 }
                 final String postUid = postRef.getKey();
-
-
                 if (p.going.containsKey(getUid())) {
                     // Unstar the post and remove self from stars
                     p.goingToNumber = p.goingToNumber - 1;
                     p.going.remove(getUid());
+                    userDatabase.child("going_posts_id_list").child(postUid).removeValue();
                 } else {
                     // Star the post and add self to stars
                     p.goingToNumber = p.goingToNumber + 1;
@@ -235,3 +243,4 @@ public abstract class PostListFragment extends Fragment {
     public abstract Query getQuery(DatabaseReference databaseReference);
 
 }
+
