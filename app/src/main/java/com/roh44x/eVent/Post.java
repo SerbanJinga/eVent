@@ -23,9 +23,10 @@ public class Post {
     public Map<String, Boolean> interested = new HashMap<>();
     public List<Map<String, String>> tags;
     public String dateEvent;
+    public String match;
 
 
-    public Post(String uid, String author, String title, String description, String filePath, List<Map<String, String>> tags, String dateEvent) {
+    public Post(String uid, String author, String title, String description, String filePath, List<Map<String, String>> tags, String dateEvent, String match) {
         this.uid = uid;
         this.author = author;
         this.title = title;
@@ -33,6 +34,7 @@ public class Post {
         this.filePath = filePath;
         this.tags = tags;
         this.dateEvent = dateEvent;
+        this.match = match;
     }
 
     public Post(){}
@@ -49,6 +51,7 @@ public class Post {
         result.put("going", going);
         result.put("interested", interested);
         result.put("filePath", filePath);
+        result.put("match", match);
 
         return result;
     }

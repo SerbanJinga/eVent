@@ -23,6 +23,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -31,9 +37,13 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+import com.theartofdev.edmodo.cropper.CropImage;
+import com.theartofdev.edmodo.cropper.CropImageView;
 import com.tylersuehr.chips.Chip;
 import com.tylersuehr.chips.ChipsInputLayout;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -55,12 +65,10 @@ public class AddActivity extends AppCompatActivity implements TagAdapter.OnConta
     private ChipsInputLayout chipsInput;
     private RecyclerView recyclerView;
     private static final String TAG = "AddActivity";
-    private final int PICK_IMAGE_REQUEST = 71;
     private DatePickerDialog.OnDateSetListener mDateSetListener;
     private TextView mDisplayDate;
-    private Button pickPlace;
-    private TextView place;
-    int PLACE_PICKER_REQUEST = 1;
+    private UploadTask mUploadTask;
+    private int PICK_IMAGE_REQUEST = 71;
 
 
     @Override
@@ -180,8 +188,7 @@ public class AddActivity extends AppCompatActivity implements TagAdapter.OnConta
     private void submitPost() {
         final String title = mTitle.getText().toString();
         final String body = mDescription.getText().toString();
-
-
+      ;
 
         // [START single_value_read]
         final String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
@@ -232,9 +239,11 @@ public class AddActivity extends AppCompatActivity implements TagAdapter.OnConta
 
     private void writeNewPost(String userId, String username, String title, String description, String filePath, List<Map<String, String>> tags, String dateEvent){
         String key = postDatabase.child("posts").push().getKey();
-        Post post = new Post(userId, username, title, description, filePath, tags, dateEvent);
+        Post post = new Post(userId, username, title, description, filePath, tags, dateEvent, "");
         postDatabase.child("posts").child(key).setValue(post);
     }
+
+
     private void chooseImage() {
         Intent intent = new Intent();
         intent.setType("image/*");
@@ -260,8 +269,10 @@ public class AddActivity extends AppCompatActivity implements TagAdapter.OnConta
         }
     }
 
+
     @Override
     public void onContactClicked(Tag chip) {
 
     }
+
 }

@@ -1,6 +1,10 @@
 package com.roh44x.eVent;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -8,12 +12,16 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -23,9 +31,13 @@ import com.google.firebase.database.MutableData;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.Transaction;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import static android.app.Activity.RESULT_OK;
 
 public abstract class PostListFragment extends Fragment {
 
@@ -36,15 +48,19 @@ public abstract class PostListFragment extends Fragment {
     // [END define_database_reference]
 
     private FirebaseRecyclerAdapter<Post, PostViewHolder> mAdapter;
+
     private RecyclerView mRecycler;
     private LinearLayoutManager mManager;
     private DatabaseReference userDatabase;
+    private int PICK_IMAGE_REQUEST = 71;
 
     public PostListFragment() {}
 
     @Override
     public View onCreateView (LayoutInflater inflater, ViewGroup container,
                               Bundle savedInstanceState) {
+
+
         super.onCreateView(inflater, container, savedInstanceState);
         View rootView = inflater.inflate(R.layout.fragment_all_posts, container, false);
 
@@ -57,6 +73,15 @@ public abstract class PostListFragment extends Fragment {
         mRecycler.setHasFixedSize(true);
 
         return rootView;
+    }
+
+    public static double round(double value, int places) {
+        if (places < 0) throw new IllegalArgumentException();
+
+        long factor = (long) Math.pow(10, places);
+        value = value * factor;
+        long tmp = Math.round(value);
+        return (double) tmp / factor;
     }
 
     @Override
@@ -88,9 +113,8 @@ public abstract class PostListFragment extends Fragment {
             }
 
             @Override
-            protected void onBindViewHolder(PostViewHolder viewHolder, int position, final Post model) {
+            protected void onBindViewHolder(final PostViewHolder viewHolder, int position, final Post model) {
                 final DatabaseReference postRef = getRef(position);
-
                 // Set click listener for the whole post view
                 final String postKey = postRef.getKey();
                 viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -102,14 +126,42 @@ public abstract class PostListFragment extends Fragment {
                         startActivity(intent);
                     }
                 });
-                //TODO HAI MAI REPEDE
                 if(model.going.containsKey(getUid())){
                     viewHolder.btnGoing.setCompoundDrawablesWithIntrinsicBounds(R.drawable.going_filled, 0, 0, 0);
                 }else{
                     viewHolder.btnGoing.setCompoundDrawablesWithIntrinsicBounds(R.drawable.going, 0, 0, 0);
 
                 }
+                final DatabaseReference postReference = FirebaseDatabase.getInstance().getReference().child("posts").child(postKey).child("user_coef_list").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+                postReference.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        try {
+                            String cevaa = dataSnapshot.getValue().toString();
 
+
+                            if(cevaa.length() >= 6){
+
+                                String ceva = cevaa.substring(0,3);
+                                cevaa = ceva;
+
+                            }
+
+                            Double val = Double.parseDouble(cevaa) * 100 ;
+                            //double roundOff = (double) Math.round(Double.parseDouble(ceva));
+                            viewHolder.rating.setText(val.toString() + "%");
+//                            int intval
+                            //viewHolder.rating.setTextColor(0);
+                        }catch (Exception e){
+
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
 
                 // Bind Post to ViewHolder, setting OnClickListener for the star button
                 viewHolder.bindToPost(model, new View.OnClickListener() {
@@ -235,6 +287,8 @@ public abstract class PostListFragment extends Fragment {
             mAdapter.stopListening();
         }
     }
+
+
 
     public String getUid() {
         return FirebaseAuth.getInstance().getCurrentUser().getUid();

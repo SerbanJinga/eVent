@@ -13,5 +13,4 @@
         android:padding="5dp"
         android:scrollbars="vertical"
         tools:listitem="@layout/post" />
-
 </FrameLayout>

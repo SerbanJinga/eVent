@@ -1659,6 +1659,7 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_star_checkable_24
 drawable layout_bg
+drawable logo
 drawable marker_shadow
 drawable mrb_star_border_icon_black_36dp
 drawable mrb_star_icon_black_36dp
@@ -1953,9 +1954,7 @@ id phone_button
 id phone_layout
 id phone_number
 id pickDate
-id pickPlace
 id pin
-id place
 id place_chosen_button
 id places_autocomplete_action_bar
 id places_autocomplete_back_button
@@ -1984,6 +1983,7 @@ id progress_bar_place
 id progress_circular
 id progress_horizontal
 id radio
+id rating
 id rectangle
 id recycler
 id recyclerView1
@@ -2005,6 +2005,7 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
+id search
 id search_badge
 id search_bar
 id search_button
