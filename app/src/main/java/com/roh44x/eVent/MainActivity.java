@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.firebase.ui.auth.AuthUI;
@@ -86,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(this, response.getError().getMessage(), Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(this, response.getError().getMessage(), Toast.LENGTH_SHORT).show();
+                    Log.d("mytag",  response.getError().getMessage());
                 }
             }else{
                 userDatabase.child(mAuth.getCurrentUser().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {

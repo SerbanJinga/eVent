@@ -138,20 +138,12 @@ public abstract class PostListFragment extends Fragment {
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         try {
                             String cevaa = dataSnapshot.getValue().toString();
-
-
                             if(cevaa.length() >= 6){
-
-                                String ceva = cevaa.substring(0,3);
+                                String ceva = cevaa.substring(0,4);
                                 cevaa = ceva;
-
                             }
-
                             Double val = Double.parseDouble(cevaa) * 100 ;
-                            //double roundOff = (double) Math.round(Double.parseDouble(ceva));
                             viewHolder.rating.setText(val.toString() + "%");
-//                            int intval
-                            //viewHolder.rating.setTextColor(0);
                         }catch (Exception e){
 
                         }
@@ -164,26 +156,22 @@ public abstract class PostListFragment extends Fragment {
                 });
 
                 // Bind Post to ViewHolder, setting OnClickListener for the star button
-                viewHolder.bindToPost(model, new View.OnClickListener() {
+                viewHolder.bindToPost(model, postKey, new View.OnClickListener() {
                     @Override
                     public void onClick(View starView) {
                         // Need to write to both places the post is stored
                         DatabaseReference globalPostRef = mDatabase.child("posts").child(postRef.getKey());
-                        DatabaseReference userPostRef = mDatabase.child("user-posts").child(model.uid).child(postRef.getKey());
 
                         // Run two transactions
                         onGoingClicked(globalPostRef);
-                        onGoingClicked(userPostRef);
                     }
                 }, new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         DatabaseReference globalPostRef = mDatabase.child("posts").child(postRef.getKey());
-                        DatabaseReference userPostRef = mDatabase.child("user-posts").child(model.uid).child(postRef.getKey());
 
                         // Run two transactions
                         onInterested(globalPostRef);
-                        onInterested(userPostRef);
                     }
                 });
 

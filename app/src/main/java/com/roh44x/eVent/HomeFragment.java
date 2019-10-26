@@ -25,6 +25,7 @@ public class HomeFragment extends PostListFragment {
         Query recentPosts = databaseReference.child("posts")
                 .orderByChild("user_coef_list/" + uid)
                 .limitToFirst(200);
+
         return recentPosts;
     }
 

@@ -13,6 +13,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Debug;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
@@ -45,11 +46,14 @@ import com.tylersuehr.chips.ChipsInputLayout;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import io.grpc.internal.Stream;
 
 public class AddActivity extends AppCompatActivity implements TagAdapter.OnContactClickListener {
     private TagAdapter tagAdapter;
@@ -219,7 +223,7 @@ public class AddActivity extends AppCompatActivity implements TagAdapter.OnConta
                                 mapTag.put("filtrable", "true");
                                 tags.add(mapTag);
                             }
-                            writeNewPost(userId, user.username, title, body, filePath.toString(), tags, mDisplayDate.getText().toString());
+                            writeNewPost(userId, user.username, title, body, filePath, tags, mDisplayDate.getText().toString());
                             Log.e(TAG, "onDataChange:" + userId + user.username + title + body + chipsInput.getSelectedChips());
 
                         }
@@ -237,10 +241,46 @@ public class AddActivity extends AppCompatActivity implements TagAdapter.OnConta
         // [END single_value_read]
     }
 
-    private void writeNewPost(String userId, String username, String title, String description, String filePath, List<Map<String, String>> tags, String dateEvent){
-        String key = postDatabase.child("posts").push().getKey();
-        Post post = new Post(userId, username, title, description, filePath, tags, dateEvent, "");
-        postDatabase.child("posts").child(key).setValue(post);
+    private void writeNewPost(final String userId,final String username, final String title, final String description, final Uri filePath, final List<Map<String, String>> tags, final String dateEvent){
+            ByteArrayOutputStream stream = new ByteArrayOutputStream();
+            final String key = postDatabase.child("posts").push().getKey();
+            try{
+                if (filePath == null) {
+                    throw new IOException();
+                }
+                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), filePath);
+                bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
+                final String imageStoragePath = "images/" + key + ".jpg";
+                StorageReference imageRef = storageReference.child(imageStoragePath);
+                imageRef.putBytes(stream.toByteArray()).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.d("mydebug", "couldn't post to imageStoragePath: " + imageStoragePath);
+                        e.printStackTrace();
+                    }
+                }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                    @Override
+                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                        Log.d("mydebug", "SUCCESSFUL UPLOAD");
+                        Post post = new Post(userId, username, title, description, imageStoragePath, tags, dateEvent);
+                        postDatabase.child("posts").child(key).setValue(post).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                Log.d("mydebug", "SUCCESSFUL POST");
+                            }
+                        });
+                    }
+                });
+            } catch (IOException e) {
+                e.printStackTrace();
+                Post post = new Post(userId, username, title, description, "", tags, dateEvent);
+                postDatabase.child("posts").child(key).setValue(post).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Log.d("mydebug", "SUCCESSFUL POST");
+                    }
+                });
+            }
     }
 
 

@@ -1,7 +1,9 @@
 package com.roh44x.eVent;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -11,6 +13,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -19,6 +23,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.MutableData;
 import com.google.firebase.database.Transaction;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 public class PostDetailActivity extends AppCompatActivity {
     private static final String TAG = "PostDetailActivity";
@@ -99,9 +105,24 @@ public class PostDetailActivity extends AppCompatActivity {
                 mBodyView.setText(post.description);
                 noGoing.setText(Integer.toString(post.goingToNumber));
                 noIntersted.setText(Integer.toString(post.interestedInNumber));
-                Glide.with(imagePost.getContext())
-                        .load(post.filePath)
-                        .into(imagePost);
+                final String imageStoragePath = "images/" + dataSnapshot.getKey() + ".jpg";
+                StorageReference imgref = FirebaseStorage.getInstance().getReference().child(imageStoragePath);
+                imgref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                    @Override
+                    public void onSuccess(Uri uri) {
+                        Glide.with(imagePost.getContext())
+                                .load(uri.toString())
+                                .into(imagePost);
+                        imagePost.setScaleType(ImageView.ScaleType.CENTER_CROP);
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.d("mydebug", "couldn't access imageStoragePath: " + imageStoragePath);
+                        e.printStackTrace();
+                        imagePost.setImageResource(R.drawable.fui_ic_googleg_color_24dp);
+                    }
+                });
                 dateEvent.setText(post.dateEvent);
 
 
